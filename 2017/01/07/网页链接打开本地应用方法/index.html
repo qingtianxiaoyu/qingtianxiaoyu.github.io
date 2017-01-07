@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="你来我给你看个宝贝">
+<meta name="description" content="#网页链接打开本地应用方法
+1.配置&amp;lt;intent-filter&amp;gt;&amp;lt;intent-filter/&amp;gt;对应的组件可以响应符合该&amp;lt;intent-ffilter/&amp;gt;的URI。如果要实现可以接受浏览器发送的intent的&amp;lt;intent-filter/&amp;gt; 就必须添加&amp;lt;action android:name=&amp;quot;android.intent.acti">
 <meta property="og:type" content="article">
-<meta property="og:title" content="android加载框选择">
-<meta property="og:url" content="https://qingtianxiaoyu.github.io/2017/01/07/android加载框选择/index.html">
+<meta property="og:title" content="网页链接打开本地应用方法">
+<meta property="og:url" content="https://qingtianxiaoyu.github.io/2017/01/07/网页链接打开本地应用方法/index.html">
 <meta property="og:site_name" content="小李的android日常笔记">
-<meta property="og:description" content="你来我给你看个宝贝">
-<meta property="og:updated_time" content="2017-01-07T06:29:06.221Z">
+<meta property="og:description" content="#网页链接打开本地应用方法
+1.配置&amp;lt;intent-filter&amp;gt;&amp;lt;intent-filter/&amp;gt;对应的组件可以响应符合该&amp;lt;intent-ffilter/&amp;gt;的URI。如果要实现可以接受浏览器发送的intent的&amp;lt;intent-filter/&amp;gt; 就必须添加&amp;lt;action android:name=&amp;quot;android.intent.acti">
+<meta property="og:updated_time" content="2017-01-07T08:01:49.858Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="android加载框选择">
-<meta name="twitter:description" content="你来我给你看个宝贝">
+<meta name="twitter:title" content="网页链接打开本地应用方法">
+<meta name="twitter:description" content="#网页链接打开本地应用方法
+1.配置&amp;lt;intent-filter&amp;gt;&amp;lt;intent-filter/&amp;gt;对应的组件可以响应符合该&amp;lt;intent-ffilter/&amp;gt;的URI。如果要实现可以接受浏览器发送的intent的&amp;lt;intent-filter/&amp;gt; 就必须添加&amp;lt;action android:name=&amp;quot;android.intent.acti">
 
 
 
@@ -121,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://qingtianxiaoyu.github.io/2017/01/07/android加载框选择/"/>
+  <link rel="canonical" href="https://qingtianxiaoyu.github.io/2017/01/07/网页链接打开本地应用方法/"/>
 
 
 
 
 
-  <title> android加载框选择 | 小李的android日常笔记 </title>
+  <title> 网页链接打开本地应用方法 | 小李的android日常笔记 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -240,7 +243,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://qingtianxiaoyu.github.io/2017/01/07/android加载框选择/">
+  <link itemprop="mainEntityOfPage" href="https://qingtianxiaoyu.github.io/2017/01/07/网页链接打开本地应用方法/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="li">
@@ -264,7 +267,7 @@
             
             
               
-                android加载框选择
+                网页链接打开本地应用方法
               
             
           </h1>
@@ -299,7 +302,7 @@
 
           
           
-             <span id="/2017/01/07/android加载框选择/" class="leancloud_visitors" data-flag-title="android加载框选择">
+             <span id="/2017/01/07/网页链接打开本地应用方法/" class="leancloud_visitors" data-flag-title="网页链接打开本地应用方法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -326,7 +329,22 @@
       
 
       
-        
+        <p>#网页链接打开本地应用方法</p>
+<h3 id="1-配置-lt-intent-filter-gt"><a href="#1-配置-lt-intent-filter-gt" class="headerlink" title="1.配置&lt;intent-filter&gt;"></a>1.配置<code>&lt;intent-filter&gt;</code></h3><p><code>&lt;intent-filter/&gt;</code>对应的组件可以响应符合该<code>&lt;intent-ffilter/&gt;</code>的URI。如果要实现可以接受浏览器发送的intent的<code>&lt;intent-filter/&gt;</code> 就必须添加<code>&lt;action android:name=&quot;android.intent.action.VIIEW&quot;/&gt;</code>和<code>&lt;categroy android:anme=&quot;android.intent.category.DEFAULT&quot;/&gt;</code>这两项 同时必须能够接受特定的scheme 所以添加<code>&lt;data/&gt;</code>的属性，并制定scheme 的名称 在androiManifest.xml文件中进行配置，具体配置如下图（摘自：LinkedME）：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;activity</div><div class="line">            android:name=".activity.MainActivity"</div><div class="line">            android:label="@string/app_name"</div><div class="line">            android:launchMode="singleTask"&gt;</div><div class="line">           &lt;!-- URI Scheme方式 --&gt;</div><div class="line">            &lt;intent-filter&gt;</div><div class="line">                &lt;data android:scheme="lkmedemo" /&gt;</div><div class="line">                &lt;action android:name="android.intent.action.VIEW" /&gt;</div><div class="line">                &lt;category android:name="android.intent.category.DEFAULT" /&gt;</div><div class="line">                &lt;category android:name="android.intent.category.BROWSABLE" /&gt;</div><div class="line">            &lt;/intent-filter&gt;</div><div class="line">  &lt;/activity&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="2-web页面跳转链接配置"><a href="#2-web页面跳转链接配置" class="headerlink" title="2.web页面跳转链接配置"></a>2.web页面跳转链接配置</h3><p>只要简单的添加一个链接就可以实现从web页面唤起App 链接如下<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;a href="lkmedemo://?click_id=IEGyekes7"&gt;open app with uri-scheme&lt;/a&gt;</div></pre></td></tr></table></figure></p>
+<p>分析：<code>lkmedemo://ckick_id=IEGYekes7</code>,其中lkmedemo对应的就是<code>&lt;intent-filter/&gt;</code>中配置的scheme，这样系统就能找到对应的组件，该URI只包含了scheme、query两部分，你可以添加一些参数</p>
+<blockquote>
+<p><strong>注意：</strong>query部分的”?”是必须包含的</p>
+</blockquote>
+<p>当你点击该链接的时候会自动打开能接受该URI的应用，并且你可以在相应的组件中接受参数后进行后续处理</p>
+<blockquote>
+<p>DeepLinking DEMo:<a href="https://github.com/ljpww72729/DeepLinking" target="_blank" rel="external">https://github.com/ljpww72729/DeepLinking</a></p>
+</blockquote>
+<h3 id="3-参数接受处理"><a href="#3-参数接受处理" class="headerlink" title="3.参数接受处理"></a>3.参数接受处理</h3><p> 上面指出query部分属于URI携带的一些参数，如何去获取参数呢 通过<code>getQueryParament()</code>方法可获取query部分的参数 ，如下<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String click_id = getIntent().getData().getQueryParameter(<span class="string">"click_id"</span>);</div></pre></td></tr></table></figure></p>
+<p>在Android M之前，点击一个链接会弹出一个对话框，询问用户使用哪个应用打开 － 包括浏览器应用。但是谷歌在Android M 上实现了一个自动认证（auto-verify）机制，让开发者可以避开这个弹出框，使用户不必去选择一个列表，直接跳转到他们的App。</p>
+<p>官方关于App Links的介绍，已经很详细了，不再赘述，这里说一下需要注意的问题：<br>1、<code>&lt;intent-filter&gt;</code>需要按照以下格式进行配置，其中 android:autoVerify=”true” 是必须配置项。因为配置了该项，所以需要特别注意AndroidManifest.xml文件中所有的包含<code>&lt;data/&gt;</code>属性的<code>&lt;intent-filter&gt;</code>，需要在必要的域名服务器上都添加json校验文件，有一项校验不成功都会校验失败。具体参考：<a href="https://developer.android.com/training/app-links/index.html#testing" target="_blank" rel="external">https://developer.android.com/training/app-links/index.html#testing</a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">intent-filter</span>  <span class="attr">android:autoVerify</span>=<span class="string">"true"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action.VIEW"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.DEFAULT"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">"android.intent.category.BROWSABLE"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">data</span> <span class="attr">android:host</span>=<span class="string">"applinkingexperiment.appspot.com"</span> <span class="attr">android:scheme</span>=<span class="string">"http"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">data</span> <span class="attr">android:host</span>=<span class="string">"applinkingexperiment.appspot.com"</span> <span class="attr">android:scheme</span>=<span class="string">"https"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>2、json校验文件必须能通过https访问，无论intent-filter中是否声明了https。<br>3、响应只能是“application/json”类型的Content-type，其他类型都不支持！<br>4、校验不支持重定向，所以不要配置链接重定向。<br>5、生成sha256指纹证书java命令：<code>keytool -list -v -keystore my-release-key.keystore</code>，json校验文件中的sha256应该是发布签名的sha256，可以配置多个，以逗号分隔。</p>
+
       
     </div>
 
@@ -407,8 +425,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -450,6 +477,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-配置-lt-intent-filter-gt"><span class="nav-number">1.</span> <span class="nav-text">1.配置<intent-filter></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-web页面跳转链接配置"><span class="nav-number">2.</span> <span class="nav-text">2.web页面跳转链接配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-参数接受处理"><span class="nav-number">3.</span> <span class="nav-text">3.参数接受处理</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
